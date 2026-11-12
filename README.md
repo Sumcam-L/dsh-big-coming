@@ -21,7 +21,7 @@ DeepSeek Harness 插件：定时用最小请求探测官方模型是否发生变
 每一轮：
 
 1. `GET /models` —— 模型目录。比较 `name`、`context_window`、`max_output_tokens`、
-   `input_modalities`、`output_modalities`、`effort`、`api_capabilities`，以及模型的增删。
+   `input_modalities`、`output_modalities`、`effort`、`api_capabilities`，以及新出现的模型。
 2. `POST /chat/completions`，`max_tokens: 1`、`thinking: {"type": "disabled"}`，
    每个受关注模型一次。比较 `system_fingerprint`、返回的 `model` 字段、响应信封的键集合、
    以及 `prompt_tokens`。
@@ -108,7 +108,9 @@ then rumble* 一段，裁到 3.4 秒，做了 45Hz 次低频增强、压缩和�
 「看一次样子」不碰基线也不写历史。
 
 变更按种类给出标题：**分词器变了** / **系统指纹变了** / **响应结构变了** /
-**新模型登场** / **模型下架了** / **模型参数变了**。
+**新模型登场** / **模型参数变了**。
+
+模型从目录里消失**不触发**变更——下架通常是你已知的，不值得为它弹窗。
 
 ## 关于配色
 
