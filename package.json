@@ -1,6 +1,6 @@
 {
   "name": "dsh-big-coming",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "DeepSeek Harness plugin: probes the official model system fingerprint on a timer with a minimal request, and pops a random meme when it changes.",
   "icon": "assets/icon-180.png",
   "type": "module",
